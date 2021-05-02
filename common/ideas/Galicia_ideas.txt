@@ -120,7 +120,7 @@ ideas = {
 	}
 
          country = {
-		GAL_market_influence = {
+		GAL_market_help = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GAL_golicja_glodomeria"}
 			picture = freetrade
                         modifier = {

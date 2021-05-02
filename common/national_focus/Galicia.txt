@@ -173,7 +173,7 @@ focus_tree = {
 		}
 	}
 
-        focus = { #Trust the Market
+        focus = {# Trust the Market
 		id = GAL_trust_market
 		icon = GFX_theinternationalmarket
 		cost = 3
@@ -181,7 +181,7 @@ focus_tree = {
 			focus = GAL_contact_vienna
 		}
                 available = {
-			has_country_flag = GAL_market_influence
+			has_country_flag = GAL_market_help
 		}
                 mutually_exclusive = {
 		          focus = GAL_sell_oil
@@ -194,7 +194,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GAL_trust_market"
-			add_ideas = GAL_market_influence
+			add_ideas = GAL_market_help
                         swap_ideas = {
 			remove_idea = GAL_rural_society
 			add_idea = GAL_rural_society_2
@@ -211,7 +211,7 @@ focus_tree = {
 		}
                 available = {
 			NOT = {
-			has_country_flag = GAL_market_influence
+			has_country_flag = GAL_market_help
 			}
 		}
                 mutually_exclusive = {
@@ -272,8 +272,6 @@ focus_tree = {
 		id = GAL_psl_victory
 		icon = GFX_focus_AUS_agriculture
 		cost = 1
-		x = 10
-		y = 0
 		ai_will_do = {
 			factor = 1500
 		}
@@ -281,6 +279,8 @@ focus_tree = {
                         has_country_flag = GAL_psl_elected
 		}
                 relative_position_id = GAL_tough_year
+                x = 9
+		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: GAL_psl_victory"
 			add_political_power = 30
@@ -295,7 +295,7 @@ focus_tree = {
 			focus = GAL_psl_victory
 		}
                 relative_position_id = GAL_psl_victory
-		x = -3
+		x = -2
 		y = 1
 		ai_will_do = {
 			factor = 50
@@ -306,14 +306,33 @@ focus_tree = {
 		}
 	}
 
-        focus = {# Industrial Crops Initiative
-		id = GAL_industrial_crops_initiative
-		icon = GFX_NEE_crop_insurance
+        focus = {# Credit Unions
+		id = GAL_credit_unions
+		icon = 
 		cost = 1
                 prerequisite = {
 			focus = GAL_land_reform
 		}
                 relative_position_id = GAL_land_reform
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_credit_unions"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Industrial Crops Initiative
+		id = GAL_industrial_crops_initiative
+		icon = GFX_NEE_crop_insurance
+		cost = 1
+                prerequisite = {
+			focus = GAL_credit_unions
+		}
+                relative_position_id = GAL_credit_unions
 		x = 0
 		y = 1
 		ai_will_do = {
@@ -382,26 +401,7 @@ focus_tree = {
 		}
 	}
 
-        focus = {# Administrative Reform
-		id = GAL_administrative_reform
-		icon = GFX_NEE_ivy_league
-		cost = 1
-                prerequisite = {
-			focus = GAL_minority_outreach
-		}
-                relative_position_id = GAL_minority_outreach
-		x = -1
-		y = 1
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GAL_administrative_reform"
-			add_political_power = 30
-		}
-	}
-
-         focus = {# Unicameralism
+        focus = {# Unicameralism
 		id = GAL_unicameralism
 		icon = GFX_goal_government_icon
 		cost = 1
@@ -409,7 +409,7 @@ focus_tree = {
 			focus = GAL_minority_outreach
 		}
                 relative_position_id = GAL_minority_outreach
-		x = 1
+		x = 0
 		y = 1
 		ai_will_do = {
 			factor = 50
@@ -420,7 +420,26 @@ focus_tree = {
 		}
 	}
 
-        focus = {# People's Education
+        focus = {# Administrative Reform
+		id = GAL_administrative_reform
+		icon = GFX_NEE_ivy_league
+		cost = 1
+                prerequisite = {
+			focus = GAL_unicameralism
+		}
+                relative_position_id = GAL_unicameralism
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_administrative_reform"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Peoples' Education
 		id = GAL_peoples_education
 		icon = GFX_ITA_education
 		cost = 1
@@ -428,7 +447,7 @@ focus_tree = {
 			focus = GAL_psl_victory
 		}
                 relative_position_id = GAL_psl_victory
-		x = 3
+		x = 2
 		y = 1
 		ai_will_do = {
 			factor = 50
@@ -439,14 +458,33 @@ focus_tree = {
 		}
 	}
 
-        focus = {# Peasant's Guard
-		id = GAL_peasants_guard
-		icon = GFX_goal_agrarian_soldiers
+        focus = {# Chlopomania
+		id = GAL_chlopomania
+		icon = 
 		cost = 1
                 prerequisite = {
 			focus = GAL_peoples_education
 		}
                 relative_position_id = GAL_peoples_education
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_chlopomania"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Peasant's Guard
+		id = GAL_peasants_guard
+		icon = GFX_goal_agrarian_soldiers
+		cost = 1
+                prerequisite = {
+			focus = GAL_chlopomania
+		}
+                relative_position_id = GAL_chlopomania
 		x = 0
 		y = 1
 		ai_will_do = {
@@ -481,21 +519,18 @@ focus_tree = {
 		id = GAL_kraj_wloscian
 		icon = GFX_goal_SRI_agrarian_power
 		cost = 1
-               prerequisite = {
+                prerequisite = {
 			focus = GAL_mass_electrification
 		}
                 prerequisite = {
 			focus = GAL_administrative_reform
 		}
                 prerequisite = {
-			focus = GAL_unicameralism
-		}
-                prerequisite = {
 			focus = GAL_obroncy_ojcowizny
 		}
-                relative_position_id = GAL_minority_outreach
+                relative_position_id = GAL_administrative_reform
 		x = 0
-		y = 2
+		y = 1
 		ai_will_do = {
 			factor = 50
 		}
@@ -567,3 +602,1392 @@ focus_tree = {
 			add_political_power = 30
 		}
 	}
+
+        ##ChSR##
+
+        focus = {# 
+		id = GAL_chsr_victory
+		icon = 
+		cost = 1
+		ai_will_do = {
+			factor = 1500
+		}
+                available = {
+                        has_country_flag = GAL_chsr_elected
+		}
+                relative_position_id = GAL_psl_victory
+		x = 9
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_chsr_victory"
+			add_political_power = 30
+		}
+	}
+
+         focus = {# Searching for Coalition Partners
+		id = GAL_searching_coalition_partners
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_chsr_victory
+		}
+                relative_position_id = GAL_chsr_victory
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_searching_coalition_partners"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Parcellation of Land
+		id = GAL_parcellation_land
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_searching_coalition_partners
+		}
+                relative_position_id = GAL_searching_coalition_partners
+		x = -2
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_parcellation_land"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Strike at Usury
+		id = GAL_strike_usury
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_parcellation_land
+		}
+                relative_position_id = GAL_parcellation_land
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_strike_usury"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Infrastructure Reform
+		id = GAL_infrastructure_reform
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_strike_usury
+		}
+                relative_position_id = GAL_strike_usury
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_infrastructure_reform"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Rural-Industrial Cooperatives
+		id = GAL_rural_industrial_cooperatives
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_infrastructure_reform
+		}
+                relative_position_id = GAL_infrastructure_reform
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_rural_idustrial_cooperatives"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Folk Morality
+		id = GAL_folk_morality
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_searching_coalition_partners
+		}
+                relative_position_id = GAL_searching_coalition_partners
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_folk_morality"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Chłop z Wami
+		id = GAL_chlop_wami
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_folk_morality
+		}
+                relative_position_id = GAL_folk_morality
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_chlop_wami"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Peasant Voting
+		id = GAL_peasant_voting
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_chlop_wami
+		}
+                relative_position_id = GAL_chlop_wami
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_peasant_voting"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Christian Trade Unions
+		id = GAL_christian_trade_unions
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_peasant_voting
+		}
+                relative_position_id = GAL_peasant_voting
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_christian_trade_unions"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Fight Illiteracy
+		id = GAL_fight_illiteracy
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_searching_coalition_partners
+		}
+                relative_position_id = GAL_searching_coalition_partners
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_fight_illiteracy"
+			add_political_power = 30
+		}
+	}
+
+         focus = {# Preparation for Farm Work
+		id = GAL_preparation_farm_work
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_fight_illiteracy
+		}
+                relative_position_id = GAL_fight_illiteracy
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_preparation_farm_work"
+			add_political_power = 30
+		}
+	}
+
+         focus = {# Civil Defence Training
+		id = GAL_civil_defence_training
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_preparation_farm_work
+		}
+                relative_position_id = GAL_preparation_farm_work
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_civil_defence_training"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Żywią i Bronią
+		id = GAL_zywia_bronia
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_civil_defence_training
+		}
+                relative_position_id = GAL_civil_defence_training
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_zywia_bronia"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Kraj Chłopstwa
+		id = GAL_kraj_chlopstwa
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_rural_industrial_cooperatives
+		}
+                prerequisite = {
+			focus = GAL_christian_trade_unions
+		}
+                prerequisite = {
+			focus = GAL_zywia_bronia
+		}
+                relative_position_id = GAL_christian_trade_unions
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_kraj_chlopstwa"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Liberation Theology
+		id = GAL_liberation_theology
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_kraj_chlopstwa
+		}
+                mutually_exclusive = {
+		          focus = GAL_unity_polish_christ
+		}
+                relative_position_id = GAL_kraj_chlopstwa
+		x = -2
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_liberation_theology"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Unity in Polish Christ
+		id = GAL_unity_polish_christ
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_kraj_chlopstwa
+		}
+                mutually_exclusive = {
+		          focus = GAL_liberation_theology
+		}
+                relative_position_id = GAL_kraj_chlopstwa
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_unity_polish_christ"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Peasant Internationale
+		id = GAL_peasant_internationale
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_kraj_chlopstwa
+		}
+                relative_position_id = GAL_kraj_chlopstwa
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_peasant_internationale"
+			add_political_power = 30
+		}
+	}
+
+        ##PPSD##
+
+        focus = {# 
+		id = GAL_ppsd_victory
+		icon = 
+		cost = 1
+		ai_will_do = {
+			factor = 1500
+		}
+                available = {
+                        has_country_flag = GAL_ppsd_elected
+		}
+                relative_position_id = GAL_chsr_victory
+		x = 9
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_ppsd_victory"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Progressive Tax System
+		id = GAL_progressive_tax_system
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_ppsd_victory
+		}
+                relative_position_id = GAL_ppsd_victory
+		x = -3
+		y = 1
+                ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_progressive_tax_system"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Judicial Reform
+		id = GAL_judicial_reform
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_progressive_tax_system
+		}
+                relative_position_id = GAL_progressive_tax_system
+		x = 0
+		y = 1
+                ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_judicial_reform"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Egalitarian Constitution
+		id = GAL_egalitarian_constitution
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_judicial_reform
+		}
+                relative_position_id = GAL_judicial_reform
+		x = 0
+		y = 1
+                ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_egalitarian_constitution"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Reject Anti-Independence Socialism
+		id = GAL_reject_antiindependence_socialism
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_ppsd_victory
+		}
+                relative_position_id = GAL_ppsd_victory
+		x = -1
+		y = 1
+                ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_reject_antiindependence_socialism"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Support Zionism
+		id = GAL_support_zionism
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_reject_antiindependence_socialism
+		}
+                relative_position_id = GAL_reject_antiindependence_socialism
+		x = 0
+		y = 1
+                ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_support_zionism"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Combat the Degeneration of the Race
+		id = GAL_combat_degeneration_race
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_support_zionism
+		}
+                relative_position_id = GAL_support_zionism
+		x = 0
+		y = 1
+                ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_combat_degeneration_race"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Citizens' Education
+		id = GAL_citizens_education
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_ppsd_victory
+		}
+                relative_position_id = GAL_ppsd_victory
+		x = 1
+		y = 1
+                ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_citizens_education"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Związek Strzelecki
+		id = GAL_zwiazek_strzelecki
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_citizens_education
+		}
+                relative_position_id = GAL_citizens_education
+		x = 0
+		y = 1
+                ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_zwiazek_strzelecki"
+			add_political_power = 30
+		}
+	}
+     
+        focus = {# New Army Cadres
+		id = GAL_new_army_cadres
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_zwiazek_strzelecki
+		}
+                relative_position_id = GAL_zwiazek_strzelecki
+		x = 0
+		y = 1
+                ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_new_army_cadres"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Labour Time Reform
+		id = GAL_labour_time_reform
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_ppsd_victory
+		}
+                relative_position_id = GAL_ppsd_victory
+		x = 3
+		y = 1
+                ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_labour_time_reform"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Nationalization of Heavy Industry
+		id = GAL_nationalization_heavy_industry
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_labour_time_reform
+		}
+                relative_position_id = GAL_labour_time_reform
+		x = 0
+		y = 1
+                ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_nationalization_heavy_industry"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Związek Zawodowy Rolników
+		id = GAL_zwiazek_zawodowy_rolnikow
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_nationalization_heavy_industry
+		}
+                relative_position_id = GAL_nationalization_heavy_industry
+		x = 0
+		y = 1
+                ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_zwiazek_zawodowy_rolnikow"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Kraj Ludzi Pracujących
+		id = GAL_kraj_ludzi_pracujacyh
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_egalitarian_constitution
+		}
+                prerequisite = {
+			focus = GAL_combat_degeneration_race
+		}
+                prerequisite = {
+			focus = GAL_new_army_cadres
+		}
+                prerequisite = {
+			focus = GAL_zwiazek_zawodowy_rolnikow
+		}
+                relative_position_id = GAL_new_army_cadres
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_kraj_ludzi_pracujacyh"
+			add_political_power = 30
+		}
+	}
+
+        ##SPN##
+
+        focus = {# 
+		id = GAL_spn_victory
+		icon = 
+		cost = 1
+		ai_will_do = {
+			factor = 1500
+		}
+                available = {
+                        has_country_flag = GAL_spn_elected
+		}
+                relative_position_id = GAL_ppsd_victory
+		x = 11
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_spn_victory"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Search for a Stable Majority
+		id = GAL_search_stable_majority
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_spn_victory
+		}
+                relative_position_id = GAL_spn_victory
+		x = -3
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_search_stable_majority"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Uniwersytet Wiodący
+		id = GAL_uniwersytet_wiodacy
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_spn_victory
+		}
+                relative_position_id = GAL_spn_victory
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_uniwersytet_wiodacy"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Petrify the Curial System
+		id = GAL_petrify_curial_system
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_spn_victory
+		}
+                relative_position_id = GAL_spn_victory
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_petrify_curial_system"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Ukrainian Question
+		id = GAL_ukrainian_question
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_spn_victory
+		}
+                relative_position_id = GAL_spn_victory
+		x = 3
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_ukrainian_question"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Galician Conservatism
+		id = GAL_galician_conservatism
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_search_stable_majority
+		}
+                prerequisite = {
+			focus = GAL_uniwersytet_wiodacy
+		}
+                prerequisite = {
+			focus = GAL_petrify_curial_system
+		}
+                prerequisite = {
+			focus = GAL_ukrainian_question
+		}
+                relative_position_id =  GAL_petrify_curial_system
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_galician_conservatism"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Dominacja Stańczyków
+		id = GAL_dominacja_stanczykow
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_galician_conservatism
+		}
+                mutually_exclusive = {
+		          focus = GAL_dominacja_podolakow
+		}
+                relative_position_id = GAL_galician_conservatism
+		x = -2
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_dominacja_stanczykow"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Dominacja Podolaków
+		id = GAL_dominacja_podolakow
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_galician_conservatism
+		}
+                mutually_exclusive = {
+		          focus = GAL_dominacja_stanczykow
+		}
+                relative_position_id = GAL_galician_conservatism
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_dominacja_podolakow"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Warstwa Historyczna
+		id = GAL_warstwa_historyczna
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_dominacja_stanczykow
+		}
+                relative_position_id = GAL_dominacja_stanczykow
+		x = -3
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_warstwa_historyczna"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Professionalism of Officials 
+		id = GAL_professionalism_officials 
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_warstwa_historyczna
+		}
+                relative_position_id = GAL_warstwa_historyczna
+		x = -2
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_professionalism_officials "
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Intellectual Ethos 
+		id = GAL_intellectual_ethos 
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_warstwa_historyczna
+		}
+                relative_position_id = GAL_warstwa_historyczna
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_intellectual_ethos"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Dunaj-Odra-Wisła Canals
+		id = GAL_dunaj_odra_wisla_canals
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_dominacja_stanczykow
+		}
+                relative_position_id = GAL_dominacja_stanczykow
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_dunaj_odra_wisla_canals"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Agrarian Codex
+		id = GAL_agrarian_codex
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_dunaj_odra_wisla_canals
+		}
+                relative_position_id = GAL_dunaj_odra_wisla_canals
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_agrarian_codex"
+			add_political_power = 30
+		}
+	}
+         
+        focus = {# Role of the Church
+		id = GAL_role_church
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_dominacja_stanczykow
+                        focus = GAL_dominacja_podolakow
+		}
+                relative_position_id = GAL_dominacja_stanczykow
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_role_church"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Expand the Officer Corps
+		id = GAL_expand_officer_core
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_dominacja_stanczykow
+                        focus = GAL_dominacja_podolakow
+		}
+                relative_position_id = GAL_dominacja_podolakow
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_expand_officer_core"
+			add_political_power = 30
+		}
+	}
+    
+         focus = {# Rozumny Ład i Porządek
+		id = GAL_rozumny_lad_porzadek
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_role_church
+		}
+                relative_position_id = GAL_role_church
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_rozumny_lad_porzadek"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Bulwark against Ruso-Asiatism
+		id = GAL_bulwark_against_rusoasiatism
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_expand_officer_core
+		}
+                relative_position_id = GAL_expand_officer_core
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_bulwark_against_rusoasiatism"
+			add_political_power = 30
+		}
+	}
+        
+        focus = {# Metropolitan of Lwów
+		id = GAL_metropolitan_lwow
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_dominacja_podolakow
+		}
+                relative_position_id = GAL_dominacja_podolakow
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_metropolitan_lwow"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Latin Spirit
+		id = GAL_latin_spirit
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_metropolitan_lwow
+		}
+                relative_position_id = GAL_metropolitan_lwow
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_latin_spirit"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Nędza Demokracji
+		id = GAL_nedza_demokracji
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_dominacja_podolakow
+		}
+                relative_position_id = GAL_dominacja_podolakow
+		x = 3
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_nedza_demokracji"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Związek Szlachty Zagrodowej
+		id = GAL_zwiazek_szlachty_zagrodowej
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_nedza_demokracji
+		}
+                relative_position_id = GAL_nedza_demokracji
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_zwiazek_szlachty_zagrodowej"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# National Education Council
+		id = GAL_national_education_council
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_nedza_demokracji
+		}
+                relative_position_id = GAL_nedza_demokracji
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_national_education_council"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Dziedzictwo Magnatów Kresowych
+		id = GAL_dziedzictwo_magnatow_kresowych
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_rozumny_lad_porzadek
+		}
+                prerequisite = {
+			focus = GAL_bulwark_against_rusoasiatism
+		}
+                prerequisite = {
+			focus = GAL_latin_spirit
+		}
+                prerequisite = {
+			focus = GAL_zwiazek_szlachty_zagrodowej
+		}
+                prerequisite = {
+			focus = GAL_national_education_council
+		}
+                relative_position_id =  GAL_dominacja_podolakow
+		x = 0
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_dziedzictwo_magnatow_kresowych"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Dziedzictwo Jagielońskie
+		id = GAL_dziedzictwo_jagielonskie
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_rozumny_lad_porzadek
+		}
+                prerequisite = {
+			focus = GAL_bulwark_against_rusoasiatism
+		}
+                prerequisite = {
+			focus = GAL_agrarian_codex
+		}
+                prerequisite = {
+			focus = GAL_intellectual_ethos 
+		}
+                prerequisite = {
+			focus = GAL_professionalism_officials 
+		}
+                relative_position_id =  GAL_dominacja_stanczykow
+		x = 0
+		y = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_dziedzictwo_jagielonskie"
+			add_political_power = 30
+		}
+	}
+
+        ##KSE##
+
+        focus = {# 
+		id = GAL_kse_victory
+		icon = 
+		cost = 1
+		ai_will_do = {
+			factor = 1500
+		}
+                available = {
+                        has_country_flag = GAL_kse_elected
+		}
+                relative_position_id = GAL_spn_victory
+		x = 11
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: GAL_kse_victory"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Liquidate Fiscalism
+		id = GAL_liquidate_fiscalism
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_kse_victory
+		}
+                relative_position_id = GAL_kse_victory
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_liquidate_fiscalism"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Expansion of the Transport Network
+		id = GAL_expansion_transport_network
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_liquidate_fiscalism
+		}
+                relative_position_id = GAL_liquidate_fiscalism
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_expansion_transport_network"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Develop the Fallows
+		id = GAL_develop_fallows
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_expansion_transport_network
+		}
+                relative_position_id = GAL_expansion_transport_network
+		x = -2
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_develop_fallows"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Privatization of State Property
+		id = GAL_privatization_state_property
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_develop_fallows
+		}
+                relative_position_id = GAL_develop_fallows
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_privatization_state_property"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# New Tax System
+		id = GAL_new_tax_system
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_expansion_transport_network
+		}
+                relative_position_id = GAL_expansion_transport_network
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_new_tax_system"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Independent Bureaucratic Corps
+		id = GAL_independent_bureaucratic_corps
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_new_tax_system
+		}
+                relative_position_id = GAL_new_tax_system
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_independent_bureaucratic_corps"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Nafta i Praca
+		id = GAL_nafta_praca
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_privatization_state_property
+		}
+                prerequisite = {
+			focus = GAL_independent_bureaucratic_corps
+		}
+                relative_position_id = GAL_privatization_state_property
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_nafta_praca"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Nowa Reforma
+		id = GAL_nowa_reforma
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_expansion_transport_network
+		}
+                relative_position_id = GAL_expansion_transport_network
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_nowa_reforma"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Statute of Minorities
+		id = GAL_statute_minorities
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_nowa_reforma
+		}
+                relative_position_id = GAL_nowa_reforma
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_statute_minorities"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# International Financiers
+		id = GAL_international_financiers
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_statute_minorities
+		}
+                relative_position_id = GAL_statute_minorities
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_international_financiers"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Ostoja Liberalizmu
+		id = GAL_ostoja_liberalizmu
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_nafta_praca
+		}
+                prerequisite = {
+			focus = GAL_international_financiers
+		}
+                relative_position_id = GAL_expansion_transport_network
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_ostoja_liberalizmu"
+			add_political_power = 30
+		}
+	}
+
+        focus = {# Colonial League
+		id = GAL_colonial_league
+		icon = 
+		cost = 1
+                prerequisite = {
+			focus = GAL_ostoja_liberalizmu
+		}
+                relative_position_id = GAL_ostoja_liberalizmu
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_colonial_league"
+			add_political_power = 30
+		}
+	}
+
+
