@@ -72,7 +72,7 @@ ACW_entente_support:0 "Entente Advisers"
 ACW_support_usa:0 "Supporting the Federal Government"
 ACW_support_psa:0 "Supporting the Pacific Government"
 ACW_support_aus:0 "Supporting the Longist Government"
-ACW_support_cor:0 "Supporting the Nationalist Government"
+ACW_support_car:0 "Supporting the Nationalist Government"
 ACW_miss_ceasefire:0 "Mississippi Ceasefire"
 ACW_plains_ceasefire:0 "Great Plains Ceasefire"
 ACW_rocky_ceasefire:0 "Rocky Mountain Ceasefire"
@@ -886,7 +886,7 @@ amcivwar.36001.a:0 "Whoops"
 
 amcivwar.36003.t:0 "Syndicalist Dominance"
 amcivwar.36003.d:0 "The Social Patriots within Congress have utterly failed to throw around their influence in such a way as to cut left radical influence while gaining their own. With the majority of Congress controlled by syndicalist unions who have the lion's share of control, it is clear that the Social Patriots will have to take a backseat to the revolution, hoping to gain whatever favors and union influence they can to prop up local power bases and get rewards for members."
-amcivwar.36003.a:0 "The Revoution is Secure!"
+amcivwar.36003.a:0 "The Revolution is Secure!"
 
 amcivwar.3600.t:0 "Social Patriots Unity Legislation!"
 amcivwar.3600.d:0 "The Social Patriots within Congress have put forward a controversial bill that would allow former agents of capitalism to be granted amnesty if they back our war effort. Furthermore, those considered politically 'suspect' will be offered amnesty as well if they join our army and/or unions. Naturally the Radicals are strongly opposed to this, believing they are too dangerous to given so much power and influence and instead desire we simply use them for either menial labor or house arrest until the war is over, depending on who they are."
@@ -1597,7 +1597,7 @@ amcivwar.616.d:0 "While the emergency reserves were called up for the war, now t
 amcivwar.616.a:0 "Time to rest, dear veterans"
 
 amcivwar.617.t:0 "The Vatican offers military aid to Huey Long"
-amcivwar.617.d:0 "In a rather surprising gesture of solidarity, the Vatican, under the auspices of the current Pope, has extended the offer of both weapons and supplies to the Union State. Even better, they have gone so far as to send fighting men, many of them formed from the ranks of French and Italian volunteers, to aid the Minutemen in freeing America from corruption and syndicalism. This has come as a shock to the Long administration; it's been well known that America is a largely Protestant with the Catholic population, whilst large as well, mostly residing in the greater area of New England, some of them only living as far south as southern Maryland, all well out of the reach of the American Union State at present. However, Texas has a significant Catholic population, and Louisiana has Catholic sympathies as well, making it a reasonable offer on the part of the Pope. While Huey Long personally would attribute this gesture to traditional Catholic virtues of charity and diligence, as most would, some among the upper echelons of the AFP, particularly the devout Protestant Gerald L. K. Smith, despise the notion of Roman Catholic intervention, urging Huey Long to refute any attempt by the Vatican to potentially expand their influence in North America. In particular, they cite the Catholic unrest in Mexico as an example of the Papacy's 'corrosive attempt to uproot the values of the Free World'. While one can easily dismiss Smith's ravings as unfair and bigoted, the ultimate decision rests with Huey Long."
+amcivwar.617.d:0 "In a rather surprising gesture of solidarity, the Vatican, under the auspices of the current Pope, has extended the offer of both weapons and supplies to the Union State. Even better, they have gone so far as to send fighting men, many of them formed from the ranks of French and Italian volunteers, to aid the Minutemen in freeing America from corruption and syndicalism. This has come as a shock to the Long administration; it's been well known that America is largely Protestant with the Catholic population, whilst large as well, mostly residing in the greater area of New England, some of them only living as far south as southern Maryland, all well out of the reach of the American Union State at present.\n\n However, Texas has a significant Catholic population, and Louisiana has Catholic sympathies as well, making it a reasonable offer on the part of the Pope. While Huey Long personally would attribute this gesture to traditional Catholic virtues of charity and diligence, as most would, some among the upper echelons of the AFP, particularly the devout Protestant Gerald L. K. Smith, despise the notion of Roman Catholic intervention, urging Huey Long to refute any attempt by the Vatican to potentially expand their influence in North America. In particular, they cite the Catholic unrest in Mexico as an example of the Papacy's 'corrosive attempt to uproot the values of the Free World'. While one can easily dismiss Smith's ravings as unfair and bigoted, the ultimate decision rests with Huey Long."
 amcivwar.617.a:0 "Send our thanks to His Holiness, but we have things under control."
 amcivwar.617.b:0 "Smith's just being paranoid, we need rifles, damn it!"
 

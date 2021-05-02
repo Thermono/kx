@@ -285,11 +285,7 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_equals_with_the_kaiser"
-			effect_tooltip = {
-				GER = {
-					end_puppet = MAF
-				}
-			}
+			remove_ideas = MAF_Colonial_Nation
 			hidden_effect = {
 				MAF = {
 					set_rule = {
@@ -3847,7 +3843,7 @@ focus_tree = {
 
 	shared_focus = {
 		id = MAF_Establish_Airforce
-		icon = GFX_goal_generic_air_fighter2
+		icon = GFX_goal_MAF_Schutzluftwaffe
 		prerequisite = {
 			focus = MAF_Military_Reforms
 		}
@@ -4152,7 +4148,7 @@ focus_tree = {
 
 	shared_focus = {
 		id = MAF_Undefeated_Army
-		icon = GFX_goal_conscription
+		icon = GFX_goal_MAF_Schutzetruppe
 		prerequisite = {
 			focus = MAF_Military_Reforms
 		}

@@ -162,7 +162,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_suppress_syndicalism"
 			add_stability = 0.05
-			add_popularity = { ideology = national_populist popularity = 0.05 }
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 			add_popularity = { ideology = syndicalist popularity = -0.05 }
 			decrease_ruling_party_popularity_by_5 = yes
 		}
@@ -201,7 +201,7 @@ focus_tree = {
 			add_political_power = 50
 			add_popularity = { ideology = syndicalist popularity = 0.05 }
 			increase_ruling_party_popularity_by_5 = yes
-			add_popularity = { ideology = national_populist popularity = -0.03 }
+			add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1075,7 +1075,7 @@ focus_tree = {
 		cost = 0
 		available = {
 			has_country_flag = AST_had_1936_election
-			has_government = paternal_autocrat
+			has_government = national_populist
 		}
 		x = 14
 		y = 0
@@ -1088,7 +1088,7 @@ focus_tree = {
 
 		bypass = {
 			has_country_flag = AST_had_1936_election
-			has_government = paternal_autocrat
+			has_government = national_populist
 		}
 
 		completion_reward = {
@@ -1102,7 +1102,7 @@ focus_tree = {
 		icon = GFX_focus_generic_self_management
 		cost = 5.00
 		available = {
-			has_government = paternal_autocrat
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = AST_AFM_victory
@@ -1126,7 +1126,7 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = austral.137 days = 1 }
 				set_politics = {
-					ruling_party = paternal_autocrat
+					ruling_party = national_populist
 					elections_allowed = no
 				}
 			}
@@ -1139,7 +1139,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		cost = 5.00
 		available = {
-			has_government = paternal_autocrat
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = AST_AFM_victory
@@ -1158,6 +1158,12 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_propaganda_effort"
 			increase_ruling_party_popularity_by_5 = yes
 			add_war_support = 0.10
+			hidden_effect = {
+				country_event = {
+					id = austral.1001
+					days = 20
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -1167,7 +1173,7 @@ focus_tree = {
 		icon = GFX_goal_tfv_sever_ties_with_uk
 		cost = 5.00
 		available = {
-			has_government = paternal_autocrat
+			has_government = national_populist
 			controls_all_owned_states = yes
 			country_exists = ENT
 		}
@@ -1213,7 +1219,7 @@ focus_tree = {
 		icon = GFX_goal_authoritarian
 		cost = 6.00
 		available = {
-			has_government = paternal_autocrat
+			has_government = national_populist
 			has_idea = AST_new_unrest
 			controls_all_owned_states = yes
 		}
@@ -1247,7 +1253,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_socialist_government = yes
-				has_government = paternal_autocrat
+				has_government = national_populist
 			}
 		}
 		prerequisite = {
@@ -1262,7 +1268,7 @@ focus_tree = {
 			factor = 2
 			modifier = {
 				factor = 2
-				has_government = paternal_autocrat
+				has_government = national_populist
 			}
 		}
 
@@ -1283,7 +1289,7 @@ focus_tree = {
 			has_idea = AST_social_reforms_1
 			OR = {
 				has_socialist_government = yes
-				has_government = paternal_autocrat
+				has_government = national_populist
 			}
 		}
 		prerequisite = {
@@ -1297,7 +1303,7 @@ focus_tree = {
 			factor = 2
 			modifier = {
 				factor = 2
-				has_government = paternal_autocrat
+				has_government = national_populist
 			}
 		}
 
@@ -1319,7 +1325,7 @@ focus_tree = {
 		icon = GFX_goal_AST_monarch_officers
 		cost = 5.00
 		available = {
-			has_government = paternal_autocrat
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = AST_restore_order_2
@@ -1349,6 +1355,12 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = austral.100 days = 180 }
 			}
+			hidden_effect = {
+				country_event = {
+					id = austral.1002
+					days = 20
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -1358,7 +1370,7 @@ focus_tree = {
 		icon = GFX_goal_demobilization
 		cost = 5.00
 		available = {
-			has_government = paternal_autocrat
+			has_government = national_populist
 			has_idea = AST_army_loyal
 		}
 		prerequisite = {
@@ -1381,6 +1393,7 @@ focus_tree = {
 				remove_idea = AST_army_loyal
 				add_idea = AST_army_fortress
 			}
+
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
 	}
@@ -1390,7 +1403,7 @@ focus_tree = {
 		icon = GFX_goal_state_economy
 		cost = 5.00
 		available = {
-			has_government = paternal_autocrat
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = AST_restore_order_2
@@ -1417,7 +1430,7 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 5.00
 		available = {
-			has_government = paternal_autocrat
+			has_government = national_populist
 			has_idea = AST_AFM_economy_1
 		}
 		prerequisite = {
@@ -1448,7 +1461,7 @@ focus_tree = {
 		icon = GFX_goal_authority
 		cost = 5.00
 		available = {
-			has_government = paternal_autocrat
+			has_government = national_populist
 			is_in_faction = no
 			custom_trigger_tooltip = {
 				tooltip = JAP_not_member_of_sphere
@@ -1488,7 +1501,7 @@ focus_tree = {
 		icon = GFX_goal_japan
 		cost = 5.00
 		available = {
-			has_government = paternal_autocrat
+			has_government = national_populist
 			has_completed_focus = AST_white_australasia
 			is_in_faction = no
 			JAP = {
@@ -1539,7 +1552,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 6.00
 		available = {
-			has_government = paternal_autocrat
+			has_government = national_populist
 		}
 		prerequisite = {
 			focus = AST_on_our_own
@@ -1571,7 +1584,7 @@ focus_tree = {
 		cost = 0
 		available = {
 			has_country_flag = AST_had_1936_election
-			has_government = national_populist
+			has_government = paternal_autocrat 
 		}
 		x = 20
 		y = 0
@@ -1584,7 +1597,7 @@ focus_tree = {
 
 		bypass = {
 			has_country_flag = AST_had_1936_election
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 
 		completion_reward = {
@@ -1598,7 +1611,7 @@ focus_tree = {
 		icon = GFX_focus_secret_rearmament
 		cost = 5.00
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 			985 = { is_owned_and_controlled_by = AST }
 		}
 		prerequisite = {
@@ -1632,7 +1645,7 @@ focus_tree = {
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		cost = 5.00
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 			is_in_faction_with = ENT
 		}
 		prerequisite = {
@@ -1668,7 +1681,7 @@ focus_tree = {
 		icon = GFX_goal_broken_red_star
 		cost = 5.00
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = {
 			focus = AST_new_guard_victory
@@ -1686,7 +1699,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_crush_syndicalists"
 			add_stability = -0.05
-			add_popularity = { ideology = national_populist popularity = 0.05 }
+			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 			if = {
 				limit = { syndicalist > 0.3 }
 				add_popularity = { ideology = syndicalist popularity = -0.10 }
@@ -1703,7 +1716,7 @@ focus_tree = {
 		icon = GFX_goal_authoritarian
 		cost = 6.00
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 			has_idea = AST_new_unrest
 			controls_all_owned_states = yes
 		}
@@ -1742,7 +1755,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		cost = 5.00
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = {
 			focus = AST_restore_order_3
@@ -1773,7 +1786,7 @@ focus_tree = {
 		icon = GFX_goal_national_mobilization
 		cost = 5.00
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 			has_idea = AST_new_guard_military_1
 		}
 		prerequisite = {
@@ -1812,7 +1825,7 @@ focus_tree = {
 		icon = GFX_goal_canada
 		cost = 5.00
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 			is_in_faction_with = ENT
 		}
 		prerequisite = {
@@ -1848,7 +1861,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		cost = 5.00
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = {
 			focus = AST_royal_advisors
@@ -1880,7 +1893,7 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 5.00
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 			NOT = { has_idea = AST_depression_1 }
 			NOT = { has_idea = AST_depression_2 }
 		}
@@ -1909,7 +1922,7 @@ focus_tree = {
 		icon = GFX_goal_new_treaty
 		cost = 5.00
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 			has_idea = AST_new_guard_economy_1
 		}
 		prerequisite = {
@@ -1944,7 +1957,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		cost = 5.00
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = AST_rouse_the_masses }
 		prerequisite = { focus = AST_a_renewed_call }
@@ -1976,7 +1989,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_alliance
 		cost = 5.00
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 			is_in_faction_with = ENT
 		}
 		prerequisite = { focus = AST_rouse_the_masses }
@@ -2012,7 +2025,7 @@ focus_tree = {
 		icon = GFX_goal_volunteer_alliance
 		cost = 6.00
 		available = {
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = {
 			focus = AST_serve_the_empire
@@ -2129,7 +2142,7 @@ focus_tree = {
 				OR = {
 					has_government = social_democrat
 					has_government = market_liberal
-					has_government = national_populist
+					has_government = paternal_autocrat
 				}
 			}
 		}
@@ -2173,8 +2186,8 @@ focus_tree = {
 				factor = 0
 				OR = {
 					has_government = market_liberal
-					has_government = paternal_autocrat
 					has_government = national_populist
+					has_government = paternal_autocrat
 				}
 			}
 		}
@@ -2368,7 +2381,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0.1
-				has_government = national_populist
+				has_government = paternal_autocrat
 			}
 		}
 
@@ -3433,7 +3446,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 2
-				has_government = national_populist
+				has_government = paternal_autocrat
 			}
 			modifier = {
 				factor = 0
@@ -5246,7 +5259,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 3
-				has_government = national_populist
+				has_government = paternal_autocrat
 			}
 			modifier = {
 				factor = 2

@@ -5956,10 +5956,6 @@ country_event = { #Unrest in Chita
 		ai_chance = {
 			factor = 30
 			modifier = {
-				factor = 10
-				country_exists = SOV
-			}
-			modifier = {
 			factor = 10000
 				has_game_rule = {
 					rule = TRM_path 
@@ -5999,10 +5995,6 @@ country_event = { #NRA revolts
 		name = trmnra.2.a
 		ai_chance = {
 			factor = 45
-			modifier = {
-				factor = 10
-				country_exists = SOV
-			}
 			modifier = {
 			factor = 10000
 				has_game_rule = {
@@ -6120,10 +6112,6 @@ country_event = { #Vladivostok
 		name = trmnra.4.a
 		ai_chance = {
 			factor = 30
-			modifier = {
-				factor = 10
-				country_exists = SOV
-			}
 			modifier = {
 			factor = 10000
 				has_game_rule = {
@@ -6833,7 +6821,7 @@ country_event = { #
 			}
 		}
 		declare_war_on = {
-			target = SOV
+			target = FROM
 			type = annex_everything
 		}
 		if = {
@@ -6841,11 +6829,11 @@ country_event = { #
 				is_ai = no
 			}
 			add_ideas = TRM_Siberian_War_Buff
-			SOV = { add_ideas = RUS_Siberian_War_Debuff }
+			FROM = { add_ideas = RUS_Siberian_War_Debuff }
 		}
 		else = {
 			add_ideas = TRM_Siberian_War_Debuff
-			SOV = { add_ideas = RUS_Siberian_War_Buff }
+			FROM = { add_ideas = RUS_Siberian_War_Buff }
 		}
 		hidden_effect = {
 			news_event = {
@@ -6854,7 +6842,7 @@ country_event = { #
 			}
 			random_other_country = {
 				limit = {
-					NOT = { tag = SOV }
+					NOT = { tag = FROM }
 				}
 				news_event = {
 					id = russianews.7
@@ -6928,6 +6916,10 @@ country_event = { #NRA wins
 				factor = 4
 				SOV = { has_government = totalist }
 			}
+			modifier = {
+				factor = 4
+				RUS = { has_government = totalist }
+			}
 		}
 		add_political_power = 150
 		add_popularity = {
@@ -6955,10 +6947,23 @@ country_event = { #NRA wins
 				name = TRM_NRA_party
 			}
 		hidden_effect = {
-			SOV = {
-				country_event = {
-					id = tram.102
-					days = 1
+			if = {
+				limit = {
+					country_exists = SOV
+				}
+				SOV = {
+					country_event = {
+						id = tram.102
+						days = 1
+					}
+				}
+			}
+			else = {
+				RUS = {
+					country_event = {
+						id = tram.102
+						days = 1
+					}
 				}
 			}
 			JAP = {
@@ -7011,10 +7016,23 @@ country_event = { #NRA wins
 			}
 			remove_unit_leader = 50001
 		}
-		SOV = {
-			country_event = {
-				id = trmnra.14
-				days = 1
+		if = {
+			limit = {
+				country_exists = SOV
+			}
+			SOV = {
+				country_event = {
+					id = trmnra.14
+					days = 1
+				}
+			}
+		}
+		else = {
+			RUS = {
+				country_event = {
+					id = trmnra.14
+					days = 1
+				}
 			}
 		}
 	}
@@ -7025,6 +7043,10 @@ country_event = { #NRA wins
 			modifier = {
 				factor = 4
 				SOV = { NOT = { has_government = totalist } }
+			}
+			modifier = {
+				factor = 4
+				RUS = { NOT = { has_government = totalist } }
 			}
 		}
 		add_political_power = 150
@@ -7075,10 +7097,23 @@ country_event = { #NRA wins
 			logistics_skill = 1
 		}
 		hidden_effect = {
-			SOV = {
-				country_event = {
-					id = tram.102
-					days = 1
+			if = {
+				limit = {
+					country_exists = SOV
+				}
+				SOV = {
+					country_event = {
+						id = tram.102
+						days = 1
+					}
+				}
+			}
+			else = {
+				RUS = {
+					country_event = {
+						id = tram.102
+						days = 1
+					}
 				}
 			}
 			JAP = {
@@ -7126,10 +7161,23 @@ country_event = { #NRA wins
 			}
 			remove_unit_leader = 50001
 		}
-		SOV = {
-			country_event = {
-				id = trmnra.17
-				days = 1
+		if = {
+			limit = {
+				country_exists = SOV
+			}
+			SOV = {
+				country_event = {
+					id = trmnra.17
+					days = 1
+				}
+			}
+		}
+		else = {
+			RUS = {
+				country_event = {
+					id = trmnra.17
+					days = 1
+				}
 			}
 		}
 	}
@@ -7145,10 +7193,23 @@ country_event = {
 		name = trmnra.22.a
 		add_stability = 0.05
 		add_war_support = 0.05
-		SOV = {
-			country_event = {
-				id = trmnra.23
-				
+		if = {
+			limit = {
+				country_exists = SOV
+			}
+			SOV = {
+				country_event = {
+					id = trmnra.23
+					days = 1
+				}
+			}
+		}
+		else = {
+			RUS = {
+				country_event = {
+					id = trmnra.23
+					days = 1
+				}
 			}
 		}
 	}
@@ -7189,7 +7250,7 @@ country_event = {
 			}
 			random_other_country = {
 				limit = {
-					NOT = { tag = SOV }
+					NOT = { tag = ROOT }
 				}
 				news_event = {
 					id = russianews.7
@@ -8082,6 +8143,19 @@ country_event = {
 	}
 	option = {
 		name = trammlad.503.c
+		trigger = {
+			RUS = {
+				NOT = {
+					OR = {
+						has_government = authoritarian_democrat
+						has_government = national_populist
+						has_government = paternal_autocrat
+						has_government = social_conservative
+						has_country_flag = authoritarian_democrat_coalition
+					}
+				}
+			}
+		}
 		set_country_flag = TRM_Eurasia_Allies
 	}
 }

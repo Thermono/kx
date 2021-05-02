@@ -454,25 +454,9 @@ country_event = {
         wants_world_news = yes
     }
 
-    mean_time_to_happen = {
-        months = 2
-    }
-
-    immediate = { set_global_flag = althistory_is_cool }
 
     option = {
         name = worldnews.13.a
-         hidden_effect = {
-			if = {
-              limit = { DEH = { has_government = paternal_autocrat } }
-                 DEH = {
-                   country_event = {
-                      id = delhi.502
-                       days = 1
-                    }
-                }
-            }
-		}
     }
 }
 
@@ -8843,6 +8827,22 @@ news_event = { #The birth of the democratic CSA
 			has_socialist_government = no
 		}
 	}
+	option = {
+		name = worldnews.2050.a
+		trigger = {
+			NEE = {
+			has_government = radical_socialist
+			}
+		}
+	}
+	option = {
+		name = worldnews.2050.b
+		trigger = {
+			NOT = {
+			country_exists = NEE
+			}
+		}
+	}
 }
 
 news_event = { #William Zebulon Foster is named President
@@ -10511,7 +10511,6 @@ country_event = {
 
    trigger = {
         date > 1940.2.3
-		has_global_flag = althistory_is_cool
         wants_world_news = yes
     }
 
@@ -10527,10 +10526,10 @@ country_event = {
 
 #british-german war in afrika
 news_event = {
-	id = worldnews.557 
-	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.557" }
-	title = worldnews.557.t
-	desc = worldnews.557.d
+	id = worldnews.2557 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.2557" }
+	title = worldnews.2557.t
+	desc = worldnews.2557.d
 	picture = GFX_news_event_MAF_collapse
 
 	major = yes
@@ -10546,28 +10545,28 @@ news_event = {
 	}
 
 	option = {
-		name = worldnews.557.a
+		name = worldnews.2557.a
 		trigger = {
 			is_in_faction_with = ENT
 		}
 	}
 	
 	option = {
-		name = worldnews.557.b
+		name = worldnews.2557.b
 		trigger = {
 			is_in_faction_with = GER
 		}
 	}
 	
 	option = {
-		name = worldnews.557.c
+		name = worldnews.2557.c
 		trigger = {
 			has_socialist_government = yes
 		}
 	}
 
 	option = {
-		name = worldnews.557.e
+		name = worldnews.2557.e
 		trigger = {
 			NOT = {
 				OR = {
@@ -10582,10 +10581,10 @@ news_event = {
 
 #british victory in afrika
 news_event = {
-	id = worldnews.558 
-	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.558" }
-	title = worldnews.558.t
-	desc = worldnews.558.d
+	id = worldnews.2558 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.2558" }
+	title = worldnews.2558.t
+	desc = worldnews.2558.d
 	picture = GFX_news_event_ZAM_baring_victory
 
 	major = yes
@@ -10601,28 +10600,28 @@ news_event = {
 	}
 
 	option = {
-		name = worldnews.558.a
+		name = worldnews.2558.a
 		trigger = {
 			is_in_faction_with = ENT
 		}
 	}
 	
 	option = {
-		name = worldnews.558.b
+		name = worldnews.2558.b
 		trigger = {
 			is_in_faction_with = GER
 		}
 	}
 	
 	option = {
-		name = worldnews.558.c
+		name = worldnews.2558.c
 		trigger = {
 			has_socialist_government = yes
 		}
 	}
 
 	option = {
-		name = worldnews.558.e
+		name = worldnews.2558.e
 		trigger = {
 			NOT = {
 				OR = {
@@ -10637,10 +10636,10 @@ news_event = {
 
 #german victory in afrika
 news_event = {
-	id = worldnews.559 
-	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.559" }
-	title = worldnews.559.t
-	desc = worldnews.559.d
+	id = worldnews.2559 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.2559" }
+	title = worldnews.2559.t
+	desc = worldnews.2559.d
 	picture = GFX_news_event_ZAM_german_victory
 
 	major = yes
@@ -10656,28 +10655,28 @@ news_event = {
 	}
 
 	option = {
-		name = worldnews.559.a
+		name = worldnews.2559.a
 		trigger = {
 			is_in_faction_with = ENT
 		}
 	}
 	
 	option = {
-		name = worldnews.559.b
+		name = worldnews.2559.b
 		trigger = {
 			is_in_faction_with = GER
 		}
 	}
 	
 	option = {
-		name = worldnews.559.c
+		name = worldnews.2559.c
 		trigger = {
 			has_socialist_government = yes
 		}
 	}
 
 	option = {
-		name = worldnews.559.e
+		name = worldnews.2559.e
 		trigger = {
 			NOT = {
 				OR = {

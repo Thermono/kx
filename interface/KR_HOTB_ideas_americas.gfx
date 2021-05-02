@@ -917,7 +917,20 @@ spriteTypes = {
 	}
 	
 	##CAR##
-	
+
+	spriteType = {
+		name = "GFX_idea_great_army"
+		texturefile = "gfx/interface/ideas/ideas/CAR/great_army.tga"
+	}
+
+	spriteType = {
+		name = "GFX_idea_authority_caesar"
+		texturefile = "gfx/interface/ideas/ideas/CAR/authority_caesar.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_radio_propaganda"
+		texturefile = "gfx/interface/ideas/ideas/CAR/radio_propaganda.tga"
+	}
 	spriteType = {
 		name = "GFX_idea_affordable_goods"
 		texturefile = "gfx/interface/ideas/ideas/CAR/affordable_goods.tga"
@@ -1878,6 +1891,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_USA_empowered_army"
 		texturefile = "gfx/interface/ideas/ideas/USA/USA_empowered_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_king_spirit"
+		texturefile = "gfx/interface/ideas/ideas/USA/USA_king_spirit.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_USA_leahy_spirit"
+		texturefile = "gfx/interface/ideas/ideas/USA/USA_leahy_spirit.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_USA_lifetime_president_1"
