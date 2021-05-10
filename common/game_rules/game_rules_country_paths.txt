@@ -2791,6 +2791,18 @@ NEE_start_path = {
 		allow_achievements = yes
 	}
 	option = {
+		name = NEE_KENNEDY_MONARCHY
+		text = "RULE_OPTION_NEE_KENNEDY_MONARCHY"
+		desc = "RULE_OPTION_NEE_KENNEDY_MONARCHY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEE_ASTOR_MONARCHY
+		text = "RULE_OPTION_NEE_ASTOR_MONARCHY"
+		desc = "RULE_OPTION_NEE_ASTOR_MONARCHY_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = NEE_MILITARY_COUP
 		text = "RULE_OPTION_NEE_MILITARY_COUP"
 		desc = "RULE_OPTION_NEE_MILITARY_COUP_DESC"
@@ -3518,6 +3530,18 @@ USA_post_civil_war_macarthur = {
 		name = USA_POST_CIVIL_WAR_MACARTHUR_HOLD_ON
 		text = "RULE_OPTION_USA_POST_CIVIL_WAR_MACARTHUR_HOLD_ON"
 		desc = "RULE_OPTION_USA_POST_CIVIL_WAR_MACARTHUR_HOLD_ON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = USA_POST_CIVIL_WAR_MACARTHUR_NAVY_COUP_KING
+		text = "RULE_OPTION_USA_POST_CIVIL_WAR_MACARTHUR_NAVY_COUP_KING"
+		desc = "RULE_OPTION_USA_POST_CIVIL_WAR_MACARTHUR_NAVY_COUP_KING_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = USA_POST_CIVIL_WAR_MACARTHUR_NAVY_COUP_LEAHY
+		text = "RULE_OPTION_USA_POST_CIVIL_WAR_MACARTHUR_NAVY_COUP_LEAHY"
+		desc = "RULE_OPTION_USA_POST_CIVIL_WAR_MACARTHUR_NAVY_COUP_LEAHY_DESC"
 		allow_achievements = yes
 	}
 }
