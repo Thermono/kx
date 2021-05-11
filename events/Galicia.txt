@@ -286,6 +286,7 @@ country_event = {#Elections
 
          option = { 
 		name = gal.15.f
+                trigger = { has_country_flag = GAL_market_help }
 		add_popularity = {
 				ideology = market_liberal
 				popularity = 0.1
@@ -301,4 +302,198 @@ country_event = {#Elections
 	}
 }
 
+country_event = {#Land Reform
+	id = gal.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.16" }
+	title = gal.13.t
+	desc = gal.13.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = gal.16.a
+	}
+
+        option = { 
+		name = gal.16.b
+	}
+
+        option = { 
+		name = gal.16.c
+	}
+}
+
+country_event = {#Church & State Relations
+	id = gal.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.17" }
+	title = gal.17.t
+	desc = gal.17.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = gal.17.a
+	}
+
+        option = { 
+		name = gal.17.b
+	}
+
+        option = { 
+		name = gal.17.c
+	}
+}
+
+country_event = {#Minority Outreach
+	id = gal.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.18" }
+	title = gal.18.t
+	desc = gal.18.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = gal.18.a
+	}
+
+        option = { 
+		name = gal.18.b
+	}
+
+        option = { 
+		name = gal.18.c
+	}
+}
+
+country_event = {#Administrative Reform
+	id = gal.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.19" }
+	title = gal.19.t
+	desc = gal.19.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = gal.19.a
+	}
+
+        option = { 
+		name = gal.19.b
+	}
+
+        option = { 
+		name = gal.19.c
+	}
+}
+
+country_event = {#Searching for Coalition Partners
+	id = gal.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.20" }
+	title = gal.20.t
+	desc = gal.20.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = gal.20.a
+	}
+
+        option = { 
+		name = gal.20.b
+	}
+
+        option = { 
+		name = gal.20.c
+	}
+}
+
+country_event = {#Search for a Stable Majority
+	id = gal.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.21" }
+	title = gal.21.t
+	desc = gal.21.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = gal.21.a
+	}
+
+        option = { 
+		name = gal.21.b
+	}
+
+}
+
+country_event = {#Uniwersytet Wiodący
+	id = gal.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.22" }
+	title = gal.22.t
+	desc = gal.22.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = gal.22.a
+	}
+
+        option = { 
+		name = gal.22.b
+	}
+
+}
+
+country_event = {#Petrify the Curial System
+	id = gal.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.23" }
+	title = gal.23.t
+	desc = gal.23.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = gal.23.a
+	}
+
+        option = { 
+		name = gal.23.b
+	}
+
+}
+
+country_event = {#Ukrainian Question
+	id = gal.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.24" }
+	title = gal.24.t
+	desc = gal.24.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = gal.24.a
+	}
+
+        option = { 
+		name = gal.24.b
+	}
+
+}
+
+country_event = {#Galician Conservatism
+	id = gal.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.25" }
+	title = gal.25.t
+	desc = gal.25.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = gal.25.a
+	}
+
+        option = { 
+		name = gal.25.b
+	}
+
+}
 
