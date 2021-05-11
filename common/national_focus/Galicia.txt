@@ -270,7 +270,7 @@ focus_tree = {
 
 	focus = {# 
 		id = GAL_psl_victory
-		icon = GFX_focus_AUS_agriculture
+		icon = GFX_goal_CZE_agrarians
 		cost = 1
 		ai_will_do = {
 			factor = 1500
@@ -279,7 +279,7 @@ focus_tree = {
                         has_country_flag = GAL_psl_elected
 		}
                 relative_position_id = GAL_tough_year
-                x = 9
+                x = 8
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: GAL_psl_victory"
@@ -308,7 +308,7 @@ focus_tree = {
 
         focus = {# Credit Unions
 		id = GAL_credit_unions
-		icon = 
+		icon = GFX_CAL_social_security
 		cost = 1
                 prerequisite = {
 			focus = GAL_land_reform
@@ -460,7 +460,7 @@ focus_tree = {
 
         focus = {# Chlopomania
 		id = GAL_chlopomania
-		icon = 
+		icon = GFX_focus_rus_people
 		cost = 1
                 prerequisite = {
 			focus = GAL_peoples_education
@@ -607,7 +607,7 @@ focus_tree = {
 
         focus = {# 
 		id = GAL_chsr_victory
-		icon = 
+		icon = GFX_goal_CSA_green_fields_program
 		cost = 1
 		ai_will_do = {
 			factor = 1500
@@ -616,7 +616,7 @@ focus_tree = {
                         has_country_flag = GAL_chsr_elected
 		}
                 relative_position_id = GAL_psl_victory
-		x = 9
+		x = 7
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: GAL_chsr_victory"
@@ -626,7 +626,7 @@ focus_tree = {
 
          focus = {# Searching for Coalition Partners
 		id = GAL_searching_coalition_partners
-		icon = 
+		icon = GFX_goal_generic_council
 		cost = 1
                 prerequisite = {
 			focus = GAL_chsr_victory
@@ -645,7 +645,7 @@ focus_tree = {
 
         focus = {# Parcellation of Land
 		id = GAL_parcellation_land
-		icon = 
+		icon = GFX_goal_OTT_Land_Reform
 		cost = 1
                 prerequisite = {
 			focus = GAL_searching_coalition_partners
@@ -664,7 +664,7 @@ focus_tree = {
 
         focus = {# Strike at Usury
 		id = GAL_strike_usury
-		icon = 
+		icon = GFX_goal_SIC_strike_consumerism
 		cost = 1
                 prerequisite = {
 			focus = GAL_parcellation_land
@@ -683,7 +683,7 @@ focus_tree = {
 
         focus = {# Infrastructure Reform
 		id = GAL_infrastructure_reform
-		icon = 
+		icon = GFX_goal_generic_railway_construction
 		cost = 1
                 prerequisite = {
 			focus = GAL_strike_usury
@@ -702,7 +702,7 @@ focus_tree = {
 
         focus = {# Rural-Industrial Cooperatives
 		id = GAL_rural_industrial_cooperatives
-		icon = 
+		icon = GFX_goal_CSA_class_fusion
 		cost = 1
                 prerequisite = {
 			focus = GAL_infrastructure_reform
@@ -721,7 +721,7 @@ focus_tree = {
 
         focus = {# Folk Morality
 		id = GAL_folk_morality
-		icon = 
+		icon = GFX_ITA_trad
 		cost = 1
                 prerequisite = {
 			focus = GAL_searching_coalition_partners
@@ -740,7 +740,7 @@ focus_tree = {
 
         focus = {# Chłop z Wami
 		id = GAL_chlop_wami
-		icon = 
+		icon = GFX_goal_TEX_christian_commonwealth
 		cost = 1
                 prerequisite = {
 			focus = GAL_folk_morality
@@ -759,7 +759,7 @@ focus_tree = {
 
         focus = {# Peasant Voting
 		id = GAL_peasant_voting
-		icon = 
+		icon = GFX_goal_CSA_townhall_democarcy
 		cost = 1
                 prerequisite = {
 			focus = GAL_chlop_wami
@@ -778,7 +778,7 @@ focus_tree = {
 
         focus = {# Christian Trade Unions
 		id = GAL_christian_trade_unions
-		icon = 
+		icon = GFX_goal_TEX_focus_Catholic_Unions
 		cost = 1
                 prerequisite = {
 			focus = GAL_peasant_voting
@@ -797,7 +797,7 @@ focus_tree = {
 
         focus = {# Fight Illiteracy
 		id = GAL_fight_illiteracy
-		icon = 
+		icon = GFX_goal_KTG_Educate_natives
 		cost = 1
                 prerequisite = {
 			focus = GAL_searching_coalition_partners
@@ -816,7 +816,7 @@ focus_tree = {
 
          focus = {# Preparation for Farm Work
 		id = GAL_preparation_farm_work
-		icon = 
+		icon = GFX_focus_generic_agriculture
 		cost = 1
                 prerequisite = {
 			focus = GAL_fight_illiteracy
@@ -835,7 +835,7 @@ focus_tree = {
 
          focus = {# Civil Defence Training
 		id = GAL_civil_defence_training
-		icon = 
+		icon = GFX_HUN_unite_the_militias
 		cost = 1
                 prerequisite = {
 			focus = GAL_preparation_farm_work
@@ -854,7 +854,7 @@ focus_tree = {
 
         focus = {# Żywią i Bronią
 		id = GAL_zywia_bronia
-		icon = 
+		icon = GFX_BBR_red_militia_justice
 		cost = 1
                 prerequisite = {
 			focus = GAL_civil_defence_training
@@ -873,7 +873,7 @@ focus_tree = {
 
         focus = {# Kraj Chłopstwa
 		id = GAL_kraj_chlopstwa
-		icon = 
+		icon = GFX_goal_RUS_peasant_state
 		cost = 1
                 prerequisite = {
 			focus = GAL_rural_industrial_cooperatives
@@ -898,7 +898,7 @@ focus_tree = {
 
         focus = {# Liberation Theology
 		id = GAL_liberation_theology
-		icon = 
+		icon = GFX_ITA_socchurch
 		cost = 1
                 prerequisite = {
 			focus = GAL_kraj_chlopstwa
@@ -920,7 +920,7 @@ focus_tree = {
 
         focus = {# Unity in Polish Christ
 		id = GAL_unity_polish_christ
-		icon = 
+		icon = GFX_SRI_fascist_christ
 		cost = 1
                 prerequisite = {
 			focus = GAL_kraj_chlopstwa
@@ -942,7 +942,7 @@ focus_tree = {
 
         focus = {# Peasant Internationale
 		id = GAL_peasant_internationale
-		icon = 
+		icon = GFX_SRI_fascist_peasants
 		cost = 1
                 prerequisite = {
 			focus = GAL_kraj_chlopstwa
@@ -963,7 +963,7 @@ focus_tree = {
 
         focus = {# 
 		id = GAL_ppsd_victory
-		icon = 
+		icon = GFX_goal_ZIM_RLP
 		cost = 1
 		ai_will_do = {
 			factor = 1500
@@ -972,7 +972,7 @@ focus_tree = {
                         has_country_flag = GAL_ppsd_elected
 		}
                 relative_position_id = GAL_chsr_victory
-		x = 9
+		x = 8
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: GAL_ppsd_victory"
@@ -982,7 +982,7 @@ focus_tree = {
 
         focus = {# Progressive Tax System
 		id = GAL_progressive_tax_system
-		icon = 
+		icon = GFX_goal_HOL_progressive_tax
 		cost = 1
                 prerequisite = {
 			focus = GAL_ppsd_victory
@@ -1001,7 +1001,7 @@ focus_tree = {
 
         focus = {# Judicial Reform
 		id = GAL_judicial_reform
-		icon = 
+		icon = GFX_goal_LIB_reform_judiciary
 		cost = 1
                 prerequisite = {
 			focus = GAL_progressive_tax_system
@@ -1020,7 +1020,7 @@ focus_tree = {
 
         focus = {# Egalitarian Constitution
 		id = GAL_egalitarian_constitution
-		icon = 
+		icon = GFX_goal_CSA_equality
 		cost = 1
                 prerequisite = {
 			focus = GAL_judicial_reform
@@ -1039,7 +1039,7 @@ focus_tree = {
 
         focus = {# Reject Anti-Independence Socialism
 		id = GAL_reject_antiindependence_socialism
-		icon = 
+		icon = GFX_goal_USA_antileftist_action
 		cost = 1
                 prerequisite = {
 			focus = GAL_ppsd_victory
@@ -1058,7 +1058,7 @@ focus_tree = {
 
         focus = {# Support Zionism
 		id = GAL_support_zionism
-		icon = 
+		icon = GFX_findpeaceinzion
 		cost = 1
                 prerequisite = {
 			focus = GAL_reject_antiindependence_socialism
@@ -1077,7 +1077,7 @@ focus_tree = {
 
         focus = {# Combat the Degeneration of the Race
 		id = GAL_combat_degeneration_race
-		icon = 
+		icon = GFX_NEE_neo_aristocracy
 		cost = 1
                 prerequisite = {
 			focus = GAL_support_zionism
@@ -1096,7 +1096,7 @@ focus_tree = {
 
         focus = {# Citizens' Education
 		id = GAL_citizens_education
-		icon = 
+		icon = GFX_goals_FRA_educated
 		cost = 1
                 prerequisite = {
 			focus = GAL_ppsd_victory
@@ -1115,7 +1115,7 @@ focus_tree = {
 
         focus = {# Związek Strzelecki
 		id = GAL_zwiazek_strzelecki
-		icon = 
+		icon = GFX_goal_CSA_empower_red_militias
 		cost = 1
                 prerequisite = {
 			focus = GAL_citizens_education
@@ -1134,7 +1134,7 @@ focus_tree = {
      
         focus = {# New Army Cadres
 		id = GAL_new_army_cadres
-		icon = 
+		icon = GFX_HUN_foreign_army_advisors
 		cost = 1
                 prerequisite = {
 			focus = GAL_zwiazek_strzelecki
@@ -1153,7 +1153,7 @@ focus_tree = {
 
         focus = {# Labour Time Reform
 		id = GAL_labour_time_reform
-		icon = 
+		icon = GFX_goal_CSA_for_fair_days_work
 		cost = 1
                 prerequisite = {
 			focus = GAL_ppsd_victory
@@ -1172,7 +1172,7 @@ focus_tree = {
 
         focus = {# Nationalization of Heavy Industry
 		id = GAL_nationalization_heavy_industry
-		icon = 
+		icon = GFX_goal_CSA_strenght_through_industry
 		cost = 1
                 prerequisite = {
 			focus = GAL_labour_time_reform
@@ -1191,7 +1191,7 @@ focus_tree = {
 
         focus = {# Związek Zawodowy Rolników
 		id = GAL_zwiazek_zawodowy_rolnikow
-		icon = 
+		icon = GFX_goal_CSA_agricultural_revolution
 		cost = 1
                 prerequisite = {
 			focus = GAL_nationalization_heavy_industry
@@ -1210,7 +1210,7 @@ focus_tree = {
 
         focus = {# Kraj Ludzi Pracujących
 		id = GAL_kraj_ludzi_pracujacyh
-		icon = 
+		icon = GFX_goal_CSA_practical_trade
 		cost = 1
                 prerequisite = {
 			focus = GAL_egalitarian_constitution
@@ -1240,7 +1240,7 @@ focus_tree = {
 
         focus = {# 
 		id = GAL_spn_victory
-		icon = 
+		icon = GFX_goal_ideology_social_conservative
 		cost = 1
 		ai_will_do = {
 			factor = 1500
@@ -1259,7 +1259,7 @@ focus_tree = {
 
         focus = {# Search for a Stable Majority
 		id = GAL_search_stable_majority
-		icon = 
+		icon = GFX_goal_generic_council
 		cost = 1
                 prerequisite = {
 			focus = GAL_spn_victory
@@ -1278,7 +1278,7 @@ focus_tree = {
 
         focus = {# Uniwersytet Wiodący
 		id = GAL_uniwersytet_wiodacy
-		icon = 
+		icon = GFX_goal_COR_University_System_of_America
 		cost = 1
                 prerequisite = {
 			focus = GAL_spn_victory
@@ -1297,7 +1297,7 @@ focus_tree = {
 
         focus = {# Petrify the Curial System
 		id = GAL_petrify_curial_system
-		icon = 
+		icon = GFX_focus_generic_authoritarian_government
 		cost = 1
                 prerequisite = {
 			focus = GAL_spn_victory
@@ -1316,7 +1316,7 @@ focus_tree = {
 
         focus = {# Ukrainian Question
 		id = GAL_ukrainian_question
-		icon = 
+		icon = GFX_focus_rus_ukraine
 		cost = 1
                 prerequisite = {
 			focus = GAL_spn_victory
@@ -1335,7 +1335,7 @@ focus_tree = {
 
         focus = {# Galician Conservatism
 		id = GAL_galician_conservatism
-		icon = 
+		icon = GFX_goal_galicia
 		cost = 1
                 prerequisite = {
 			focus = GAL_search_stable_majority
@@ -1363,7 +1363,7 @@ focus_tree = {
 
         focus = {# Dominacja Stańczyków
 		id = GAL_dominacja_stanczykow
-		icon = 
+		icon = GFX_goal_POL_commonwealth
 		cost = 1
                 prerequisite = {
 			focus = GAL_galician_conservatism
@@ -1385,7 +1385,7 @@ focus_tree = {
 
         focus = {# Dominacja Podolaków
 		id = GAL_dominacja_podolakow
-		icon = 
+		icon = GFX_goal_COR_american_estates
 		cost = 1
                 prerequisite = {
 			focus = GAL_galician_conservatism
@@ -1407,7 +1407,7 @@ focus_tree = {
 
         focus = {# Warstwa Historyczna
 		id = GAL_warstwa_historyczna
-		icon = 
+		icon = GFX_goal_COR_The_Lessons_of_History
 		cost = 1
                 prerequisite = {
 			focus = GAL_dominacja_stanczykow
@@ -1426,7 +1426,7 @@ focus_tree = {
 
         focus = {# Professionalism of Officials 
 		id = GAL_professionalism_officials 
-		icon = 
+		icon = GFX_goal_KEN_officer_corps
 		cost = 1
                 prerequisite = {
 			focus = GAL_warstwa_historyczna
@@ -1445,7 +1445,7 @@ focus_tree = {
 
         focus = {# Intellectual Ethos 
 		id = GAL_intellectual_ethos 
-		icon = 
+		icon = GFX_HUN_education
 		cost = 1
                 prerequisite = {
 			focus = GAL_warstwa_historyczna
@@ -1464,7 +1464,7 @@ focus_tree = {
 
         focus = {# Dunaj-Odra-Wisła Canals
 		id = GAL_dunaj_odra_wisla_canals
-		icon = 
+		icon = GFX_goal_generic_baltic_sea
 		cost = 1
                 prerequisite = {
 			focus = GAL_dominacja_stanczykow
@@ -1483,7 +1483,7 @@ focus_tree = {
 
         focus = {# Agrarian Codex
 		id = GAL_agrarian_codex
-		icon = 
+		icon = GFX_goal_new_treaty
 		cost = 1
                 prerequisite = {
 			focus = GAL_dunaj_odra_wisla_canals
@@ -1502,7 +1502,7 @@ focus_tree = {
          
         focus = {# Role of the Church
 		id = GAL_role_church
-		icon = 
+		icon = GFX_goal_SRI_close
 		cost = 1
                 prerequisite = {
 			focus = GAL_dominacja_stanczykow
@@ -1522,7 +1522,7 @@ focus_tree = {
 
         focus = {# Expand the Officer Corps
 		id = GAL_expand_officer_core
-		icon = 
+		icon = GFX_goal_generic_army_cooperation
 		cost = 1
                 prerequisite = {
 			focus = GAL_dominacja_stanczykow
@@ -1542,7 +1542,7 @@ focus_tree = {
     
          focus = {# Rozumny Ład i Porządek
 		id = GAL_rozumny_lad_porzadek
-		icon = 
+		icon = GFX_goal_BAN_army_of_peace
 		cost = 1
                 prerequisite = {
 			focus = GAL_role_church
@@ -1561,7 +1561,7 @@ focus_tree = {
 
         focus = {# Bulwark against Ruso-Asiatism
 		id = GAL_bulwark_against_rusoasiatism
-		icon = 
+		icon = GFX_goal_GEO_resist_russian_influence
 		cost = 1
                 prerequisite = {
 			focus = GAL_expand_officer_core
@@ -1580,7 +1580,7 @@ focus_tree = {
         
         focus = {# Metropolitan of Lwów
 		id = GAL_metropolitan_lwow
-		icon = 
+		icon = GFX_goal_tax_church
 		cost = 1
                 prerequisite = {
 			focus = GAL_dominacja_podolakow
@@ -1599,7 +1599,7 @@ focus_tree = {
 
         focus = {# Latin Spirit
 		id = GAL_latin_spirit
-		icon = 
+		icon = GFX_CAL_christian_mysticism
 		cost = 1
                 prerequisite = {
 			focus = GAL_metropolitan_lwow
@@ -1618,7 +1618,7 @@ focus_tree = {
 
         focus = {# Nędza Demokracji
 		id = GAL_nedza_demokracji
-		icon = 
+		icon = GFX_ITA_poor
 		cost = 1
                 prerequisite = {
 			focus = GAL_dominacja_podolakow
@@ -1637,7 +1637,7 @@ focus_tree = {
 
         focus = {# Związek Szlachty Zagrodowej
 		id = GAL_zwiazek_szlachty_zagrodowej
-		icon = 
+		icon = GFX_BBR_rural_schools
 		cost = 1
                 prerequisite = {
 			focus = GAL_nedza_demokracji
@@ -1656,7 +1656,7 @@ focus_tree = {
 
         focus = {# National Education Council
 		id = GAL_national_education_council
-		icon = 
+		icon = GFX_goal_CAL_council
 		cost = 1
                 prerequisite = {
 			focus = GAL_nedza_demokracji
@@ -1675,7 +1675,7 @@ focus_tree = {
 
         focus = {# Dziedzictwo Magnatów Kresowych
 		id = GAL_dziedzictwo_magnatow_kresowych
-		icon = 
+		icon = GFX_goal_COR_american_estates
 		cost = 1
                 prerequisite = {
 			focus = GAL_rozumny_lad_porzadek
@@ -1706,7 +1706,7 @@ focus_tree = {
 
         focus = {# Dziedzictwo Jagielońskie
 		id = GAL_dziedzictwo_jagielonskie
-		icon = 
+		icon = GFX_goal_POL_commonwealth
 		cost = 1
                 prerequisite = {
 			focus = GAL_rozumny_lad_porzadek
@@ -1739,7 +1739,7 @@ focus_tree = {
 
         focus = {# 
 		id = GAL_kse_victory
-		icon = 
+		icon = GFX_goal_ideology_market_liberal
 		cost = 1
 		ai_will_do = {
 			factor = 1500
@@ -1758,7 +1758,7 @@ focus_tree = {
 
         focus = {# Liquidate Fiscalism
 		id = GAL_liquidate_fiscalism
-		icon = 
+		icon = GFX_goal_generic_financial_markets
 		cost = 1
                 prerequisite = {
 			focus = GAL_kse_victory
@@ -1777,7 +1777,7 @@ focus_tree = {
 
         focus = {# Expansion of the Transport Network
 		id = GAL_expansion_transport_network
-		icon = 
+		icon = GFX_CAL_national_railroads
 		cost = 1
                 prerequisite = {
 			focus = GAL_liquidate_fiscalism
@@ -1796,7 +1796,7 @@ focus_tree = {
 
         focus = {# Develop the Fallows
 		id = GAL_develop_fallows
-		icon = 
+		icon = GFX_goal_CAL_prosperity_cost
 		cost = 1
                 prerequisite = {
 			focus = GAL_expansion_transport_network
@@ -1815,7 +1815,7 @@ focus_tree = {
 
         focus = {# Privatization of State Property
 		id = GAL_privatization_state_property
-		icon = 
+		icon = GFX_goal_CSA_capital_investments
 		cost = 1
                 prerequisite = {
 			focus = GAL_develop_fallows
@@ -1834,7 +1834,7 @@ focus_tree = {
 
         focus = {# New Tax System
 		id = GAL_new_tax_system
-		icon = 
+		icon = GFX_goal_UKR_kulak_tax
 		cost = 1
                 prerequisite = {
 			focus = GAL_expansion_transport_network
@@ -1853,7 +1853,7 @@ focus_tree = {
 
         focus = {# Independent Bureaucratic Corps
 		id = GAL_independent_bureaucratic_corps
-		icon = 
+		icon = GFX_goal_BAN_show_of_power
 		cost = 1
                 prerequisite = {
 			focus = GAL_new_tax_system
@@ -1872,7 +1872,7 @@ focus_tree = {
 
         focus = {# Nafta i Praca
 		id = GAL_nafta_praca
-		icon = 
+		icon = GFX_goal_oil_derrick
 		cost = 1
                 prerequisite = {
 			focus = GAL_privatization_state_property
@@ -1894,7 +1894,7 @@ focus_tree = {
 
         focus = {# Nowa Reforma
 		id = GAL_nowa_reforma
-		icon = 
+		icon = GFX_goal_SRI_capitalism
 		cost = 1
                 prerequisite = {
 			focus = GAL_expansion_transport_network
@@ -1913,7 +1913,7 @@ focus_tree = {
 
         focus = {# Statute of Minorities
 		id = GAL_statute_minorities
-		icon = 
+		icon = GFX_goal_BAN_fair_protection
 		cost = 1
                 prerequisite = {
 			focus = GAL_nowa_reforma
@@ -1932,7 +1932,7 @@ focus_tree = {
 
         focus = {# International Financiers
 		id = GAL_international_financiers
-		icon = 
+		icon = GFX_ITA_aristocrat
 		cost = 1
                 prerequisite = {
 			focus = GAL_statute_minorities
@@ -1951,7 +1951,7 @@ focus_tree = {
 
         focus = {# Ostoja Liberalizmu
 		id = GAL_ostoja_liberalizmu
-		icon = 
+		icon = GFX_CAL_most_profitable_religion
 		cost = 1
                 prerequisite = {
 			focus = GAL_nafta_praca
@@ -1973,7 +1973,7 @@ focus_tree = {
 
         focus = {# Colonial League
 		id = GAL_colonial_league
-		icon = 
+		icon = GFX_goal_KTG_Colonial_Economy_Focus
 		cost = 1
                 prerequisite = {
 			focus = GAL_ostoja_liberalizmu
