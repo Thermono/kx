@@ -1,7 +1,7 @@
-###########################
+#######################
 # Galician Focus Tree
-# Created by Nickay
-###########################
+# By Nickay
+#######################
 
 focus_tree = {
 	id = Galicia
@@ -278,6 +278,9 @@ focus_tree = {
                 available = {
                         has_country_flag = GAL_psl_elected
 		}
+                bypass = {
+			has_country_flag = GAL_psl_elected
+		}
                 relative_position_id = GAL_tough_year
                 x = 8
 		y = 0
@@ -302,9 +305,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GAL_land_reform"
-			country_event = {
-				id = gal.16
-				days = 1
+                        country_event = {
+				id = gal.psl1
+				days = 2
 			} 
 		}
 	}
@@ -362,7 +365,51 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GAL_mass_electrification"
-			add_political_power = 30
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		       }
 		}
 	}
 
@@ -381,9 +428,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GAL_church_state_relations"
-			country_event = {
-				id = gal.17
-				days = 1
+                        country_event = {
+				id = gal.psl2
+				days = 3
 			} 
 		}
 	}
@@ -403,9 +450,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: GAL_minority_outreach"
-			country_event = {
-				id = gal.18
-				days = 1
+                        country_event = {
+				id = gal.psl3
+				days = 5
 			} 
 		}
 	}
@@ -444,9 +491,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GAL_administrative_reform"
-			country_event = {
-				id = gal.19
-				days = 1
+                        country_event = {
+				id = gal.psl4
+				days = 4
 			} 
 		}
 	}
@@ -486,6 +533,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: GAL_chlopomania"
 			add_political_power = 30
+                        hidden_effect = {
+                                country_event = {
+				       id = gal.psl7
+				       days = 14
+			        } 
+                        }
 		}
 	}
 
@@ -581,6 +634,12 @@ focus_tree = {
                 mutually_exclusive = {
 		          focus = GAL_ukrainian_cooperation
 		}
+                available = {
+			controls_state = 93
+			controls_state = 792
+                        controls_state = 997
+			controls_state = 199
+		}
                 relative_position_id = GAL_kraj_wloscian
 		x = 0
 		y = 1
@@ -589,7 +648,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GAL_kordon_sokalski"
-			add_political_power = 30
+			add_state_core = 93
+			add_state_core = 792
+			add_state_core = 997
+                        add_state_core = 199
 		}
 	}
 
@@ -603,6 +665,12 @@ focus_tree = {
                 mutually_exclusive = {
 		          focus = GAL_kordon_sokalski
 		}
+                available = {
+		          UKR = {
+				exists = yes
+				has_socialist_government = yes
+			  }
+                }
                 relative_position_id = GAL_kraj_wloscian
 		x = 2
 		y = 1
@@ -611,7 +679,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GAL_ukrainian_cooperation"
-			add_political_power = 30
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = UKR
+			}
 		}
 	}
 
@@ -626,6 +697,9 @@ focus_tree = {
 		}
                 available = {
                         has_country_flag = GAL_chsr_elected
+		}
+                 bypass = {
+			has_country_flag = GAL_chsr_elected
 		}
                 relative_position_id = GAL_psl_victory
 		x = 7
@@ -651,10 +725,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GAL_searching_coalition_partners"
-			country_event = {
-				id = gal.20
-				days = 1
-			} 
 		}
 	}
 
@@ -990,6 +1060,9 @@ focus_tree = {
                 available = {
                         has_country_flag = GAL_ppsd_elected
 		}
+                bypass = {
+			has_country_flag = GAL_ppsd_elected
+		}
                 relative_position_id = GAL_chsr_victory
 		x = 8
 		y = 0
@@ -1267,6 +1340,9 @@ focus_tree = {
                 available = {
                         has_country_flag = GAL_spn_elected
 		}
+                bypass = {
+			has_country_flag = GAL_spn_elected
+		}
                 relative_position_id = GAL_ppsd_victory
 		x = 11
 		y = 0
@@ -1290,11 +1366,7 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GAL_search_stable_majority"
-			country_event = {
-				id = gal.21
-				days = 1
-			} 
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_search_stable_majority" 
 		}
 	}
 
@@ -1312,11 +1384,7 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GAL_uniwersytet_wiodacy"
-			country_event = {
-				id = gal.22
-				days = 1
-			} 
+			log = "[GetDateText]: [Root.GetName]: Focus GAL_uniwersytet_wiodacy" 
 		}
 	}
 
@@ -1335,10 +1403,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GAL_petrify_curial_system"
-			country_event = {
-				id = gal.23
-				days = 1
-			} 
 		}
 	}
 
@@ -1357,10 +1421,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GAL_ukrainian_question"
-			country_event = {
-				id = gal.24
-				days = 1
-			} 
 		}
 	}
 
@@ -1388,10 +1448,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: GAL_galician_conservatism"
-			country_event = {
-				id = gal.25
-				days = 1
-			} 
 		}
 	}
 
@@ -1780,6 +1836,9 @@ focus_tree = {
 		}
                 available = {
                         has_country_flag = GAL_kse_elected
+		}
+                bypass = {
+			has_country_flag = GAL_kse_elected
 		}
                 relative_position_id = GAL_spn_victory
 		x = 11
